@@ -25,6 +25,9 @@ jobs:
         # Default: ${{ github.repository }}
         repository: 'NASA-SW-VnV/ikos'
     
+    - name: Install preqs
+      run: apt-get install -qq -y libgmp-dev libboost-dev libboost-filesystem-dev libboost-thread-dev libboost-test-dev python3 python3-pygments libsqlite3-dev libtbb-dev libz-dev libedit-dev llvm-9 llvm-9-dev llvm-9-tools clang-9 git --no-install-recommends
+    
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
